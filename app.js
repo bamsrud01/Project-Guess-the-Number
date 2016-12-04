@@ -13,3 +13,9 @@
 //After completion, inform the player of the correct number and total turns used
 
 //Ask the player to play again.
+
+
+//  Function to get a random number from specified constraints
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
