@@ -15,16 +15,36 @@ while (maximum <= minimum) {
   maximum = isNumber('The maximum must be larger than the minimum of ' + minimum + '.');
 }
 
-//Create a counter for the number of turns remaining
+//  Create a random number
+var secret = getRandomNumber(minimum, maximum);
 
-//Write a loop for the user to guess the number
-  //Check to see if the number is correct
-  //Inform the user if the number is higher or lower
-  //Track the turns remaining
+//  Create a counter for the number of turns remaining
+var counter = 6;
 
-//After completion, inform the player of the correct number and total turns used
+//  Write a loop for the user to guess the number
+while (counter > 0) {
+  var guess = isNumber('Guess the number!');
 
-//Ask the player to play again.
+  if (secret == guess) {
+    alert('Congratulations!  You guessed the secret number!');
+    break;
+  } else if (secret >= guess) {
+    alert('You guessed too low.');
+  } else if (secret <= guess) {
+    alert('You guessed too high.');
+  } else {
+    alert ('Error.');
+  }
+
+  counter --;
+}
+  //  Check to see if the number is correct
+  //  Inform the user if the number is higher or lower
+  //  Track the turns remaining
+
+//  After completion, inform the player of the correct number and total turns used
+
+//  Ask the player to play again.
 
 
 //  Function to get a random number from specified constraints
