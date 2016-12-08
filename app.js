@@ -1,7 +1,19 @@
-//Create a random number function, with minimum and maximum settings
+function isNumber(message) {
+  var numberToCheck = prompt(message);
+  //  Filter out non-number entries
+  while (!Number.isInteger(parseInt(numberToCheck))) {
+    numberToCheck = prompt('Please try again.  Enter a NUMBER');
+  }
+  return parseInt(numberToCheck);
+}
 
-//Have the user choose both numbers
-  //Filter out non-number entries
+//  Have the user choose both numbers
+var minimum = isNumber('Please choose a minimum number');
+var maximum = isNumber('Please choose a maximum number');
+
+while (maximum <= minimum) {
+  maximum = isNumber('The maximum must be larger than the minimum of ' + minimum + '.');
+}
 
 //Create a counter for the number of turns remaining
 
